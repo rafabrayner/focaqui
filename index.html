@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Focaqui</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="scss/rs=ABjfnFVbQcotbdUVy8kaSWhIjgkKrsA2ZQ.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/freelancer.min.css" rel="stylesheet">
+
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+  <!-- Funções de interação do site -->
+  <script type="text/javascript" src="js/functions.js"></script>
+
+  <!-- Google Charts -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Task", "Density", { role: "style" }],
+        ["PEDREGAL", 3, "#c0392b"],
+        ["SANDRA CAVALCANTE", 8, "#00cec9"],
+        ["MIRANTE", 16, "#b2bec3"],
+        ["MONTE CASTELO", 19, "#e84393"],
+        ["NOVA BRASÍLIA", 24, "#d63031"],
+        ["CENTENÁRIO", 32, "#0984e3"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+        {
+          calc: "stringify",
+          sourceColumn: 1,
+          type: "string",
+          role: "annotation"
+        },
+        2]);
+
+      var options = {
+        title: "Gráfico de Barra - Alertas de Todos os Bairros",
+        width: 1200,
+        height: 700,
+        bar: { groupWidth: "100%" },
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+
+    }
+  </script>
+
+  <style>
+    .button-edu {
+      padding: 5px 30px;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #2c3e50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button-vio {
+      padding: 5px 30px;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #2c3e50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button-alerta {
+      padding: 5px 10px;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #ff1414;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button-edu:hover {
+      background-color: #2c3e50
+    }
+
+    .button-edu:active {
+      background-color: #2c3e50;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+
+
+    .button-vio:hover {
+      background-color: #2c3e50
+    }
+
+    .somePorra {
+      display: none !important;
+    }
+
+    .button-vio:active {
+      background-color: #2c3e50;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+
+
+    .button-alerta:hover {
+      background-color: #ff1414
+    }
+
+    .button-alerta:active {
+      background-color: #ff1414;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+
+
+    .button-buscar:hover {
+      background-color: #2c3e50;
+    }
+
+    .button-buscar:active {
+      background-color: #2c3e50;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+    .jQhVs-haAclf .jQhVs-rM9Gsd .jQhVs-haAclf-piqGWb-jQhVs-ZiwkRe {
+      display: none !important;
+      visibility: hidden !important;
+    }
+
+    #mainNav {
+      max-height: 70px;
+    }
+
+    .neVct-IlgHgd .HzV7m-b0t70b-haAclf {
+      background-color: #f5f5f5;
+    }
+  </style>
+
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <img src="img/logo-4.png" alt="logo" style="width: 50px;"> Focaqui</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Análise Temporal</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Sobre</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead text-white text-center" style="padding: 0px; background-color: #efeeec;">
+    <div id="map" style="width:100%; height:800px;">
+      <iframe src="https://www.google.com/maps/d/embed?mid=16lZwDPYjlxCTSEuGCqSNJdFrhkXZ-3ig" width="100%" height="800px" frameborder="0"
+        style="border:0; margin-top: 20px;" allowfullscreen id="iframeTeste"></iframe>
+      <div style="position: absolute; top: 12%; left: 73%; background-color: white; padding: 10px; border: 2px solid white; border-radius: 20px; box-shadow: 0 5px #666; opacity: 0.8;">
+
+        <div class="form-group" style="display: inline-block; width: 346px;">
+          <h4>
+            <label for="selectTest" style="color:#666;">Bairros</label>
+          </h4>
+          <select class="form-control" id="selectTeste" style="margin-bottom: 20px;">
+            <option value="0">GERAL</option>
+            <option value="1">PEDREGAL</option>
+            <option value="2">CENTENÁRIO</option>
+            <option value="3">NOVA BRASÍLIA</option>
+            <option value="4">MONTE CASTELO</option>
+            <option value="5">MIRANTE</option>
+            <option value="6">SANDRA CAVALCANTE</option>
+            <option value="7">VILA CABRAL</option>
+            <option value="8">ITARARÉ</option>
+            <option value="9">LOUZEIRO</option>
+            <option value="10">NAÇÕES</option>
+            <option value="11">ARAXÁ</option>
+            <option value="12">NOVO BODOCONGÓ</option>
+            <option value="13">CUITÉS</option>
+            <option value="14">JARDIM CONTINENTAL</option>
+            <option value="15">UNIVERSITÁRIO</option>
+            <option value="16">CATOLÉ</option>
+            <option value="17">JOSÉ PINHEIRO</option>
+            <option value="18">PALMEIRA</option>
+            <option value="19">JEREMIAS</option>
+            <option value="20">MONTE SANTO</option>
+            <option value="21">PRATA</option>
+            <option value="22">BELA VISTA</option>
+            <option value="23">VELAME</option>
+            <option value="24">DISTRITO INDUSTRIAL</option>
+            <option value="25">ALTO BRANCO</option>
+            <option value="26">JARDIM TAVARES</option>
+            <option value="27">CASTELO BRANCO</option>
+            <option value="28">SANTO ANTÔNIO</option>
+            <option value="29">CONCEIÇÃO</option>
+            <option value="30">SÃO JOSÉ</option>
+            <option value="31">CENTRO</option>
+            <option value="32">LAURITZEN</option>
+            <option value="33">CRUZEIRO</option>
+            <option value="34">DINAMÉRICA</option>
+            <option value="35">SANTA CRUZ</option>
+            <option value="36">MALVINAS</option>
+            <option value="37">ESTAÇÃO VELHA</option>
+            <option value="38">TAMBOR</option>
+            <option value="39">JARDIM PAULISTANO</option>
+            <option value="40">CIDADES</option>
+            <option value="41">ACÁCIO FIGUEIREDO</option>
+            <option value="42">PRESIDENTE MÉDICE</option>
+            <option value="43">SERROTÃO</option>
+            <option value="44">TRÊS IRMÃS</option>
+            <option value="45">LIBERDADE</option>
+            <option value="46">BODOCONGÓ</option>
+            <option value="47">RAMADINHA</option>
+            <option value="48">JARDIM QUARENTA</option>
+            <option value="49">SANTA ROSA</option>
+            <option value="50">QUARENTA</option>
+          </select>
+
+          <button class="button-edu" id="buttonBusca" style="width: 100%;">
+            <i class="fa fa-search" aria-hidden="true"></i> Buscar</button>
+
+          <h4 style="margin-top: 30px;">
+            <label for="selectTest" style="color:#666; margin-bottom: 10px;">Legenda</label>
+            <p style="font-size: 10px; color: #444; margin-bottom: 5px;">Violência</p>
+            <div style="font-size: 20px; margin-bottom: 10px; line-height: 20px;">
+              <img src="img/verde.png" alt="" style="width: 15px; margin-top: -3px;">
+              <span style="color: #333; vertical-align: baseline;"> 0 Mortes</span>
+            </div>
+            <div style="font-size: 20px; margin-bottom: 10px; line-height: 20px;">
+              <img src="img/amarelo.png" alt="" style="width: 15px; margin-top: -3px;">
+              <span style="color: #333; vertical-align: baseline;"> 1 a 3 Mortes</span>
+            </div>
+            <div style="font-size: 20px; margin-bottom: 10px; line-height: 20px;">
+              <img src="img/laranja.png" alt="" style="width: 15px; margin-top: -3px;">
+              <span style="color: #333; vertical-align: baseline;"> 4 a 5 Mortes</span>
+            </div>
+            <div style="font-size: 20px; margin-bottom: 10px; line-height: 20px;">
+              <img src="img/vermelho.png" alt="" style="width: 15px; margin-top: -3px;">
+              <span style="color: #333; vertical-align: baseline;"> acima de 6 Mortes</span>
+            </div>
+            <p style="font-size: 10px; color: #444; margin-bottom: 5px;">Educação</p>
+            <div style="font-size: 20px; margin-bottom: 10px; line-height: 20px;">
+              <img src="img/legenda-educa.png" alt="" style="width: 15px; margin-top: -3px;">
+              <span style="color: #333; vertical-align: baseline;"> Escolas</span>
+            </div>
+          </h4>
+        </div>
+
+        <h4>
+          <label for="selectTest" style="color:#666; margin-bottom: 10px;">Número de Alertas</label>
+          <div style="font-size: 20px; margin-bottom: 10px; line-height: 20px;">
+            <img src="img/alerta-educacao.png" alt="" style="width: 25px; margin-top: -3px;">
+            <span style="color: #333; vertical-align: baseline;"> 126 Educação</span>
+          </div>
+          <div style="font-size: 20px; margin-bottom: 20px; line-height: 20px;">
+            <img src="img/alerta-violencia.png" alt="" style="width: 20px; margin-top: -3px;">
+            <span style="color: #333; vertical-align: baseline;"> 87 Violência</span>
+          </div>
+        </h4>
+
+        <a class="portfolio-item d-block mx-auto" href="#alerta-visualizar">
+          <button class="button-edu" style="width: 100%; margin-bottom: 20px;">
+            <i class="fa fa-eye" aria-hidden="true"></i> Visualizar Alertas</button>
+        </a>
+
+        <div style="position: absolute; top: 105%; left: 30%;">
+          <a class="portfolio-item d-block mx-auto" href="#alerta-modal">
+            <button class="button-alerta">
+              <i class="fa fa-bullhorn" aria-hidden="true"></i> Emitir Alerta!</button>
+          </a>
+        </div>
+
+        <!--
+        <div style="position: absolute; top: 0px; left: 1050px; background-color: white; width: 300px; height: 630px; border: 2px solid white; border-radius: 20px; box-shadow: 0 5px #666; color: #666;">
+          <p>
+            <h4>Dados Gerais</h4>
+            <p>
+              <span>Bairro:</span>
+              <span id="dados-bairro">Todos</span>
+            </p>
+            <div style="text-align: center; margin-bottom: 20px;">
+              <div style="width: 100%; margin: 0 auto;">
+                <img src="img/icon-renda-domiciliar.png" alt="icone-renda-domiciliar" style="width: 100px; padding: auto;">
+              </div>
+              <span>Renda domiciliar Percapta</span>
+              <h4>R$300,00</h4>
+            </div>
+            <div style="text-align: center; margin-bottom: 20px;">
+              <div style="width: 100%; margin: 0 auto;">
+                <img src="img/icon-porcentagem-pobre.png" alt="icone-renda-domiciliar" style="width: 100px; padding: auto;">
+              </div>
+              <span>Porcentagem de Pobres</span>
+              <h4>5,65%</h4>
+            </div>
+            <div style="text-align: center; margin-bottom: 20px;">
+              <div style="width: 100%; margin: 0 auto;">
+                <img src="img/remuneracao-media.png" alt="icone-renda-domiciliar" style="width: 100px; padding: auto;">
+              </div>
+              <span>Remuneração Média</span>
+              <h4>R$856,67</h4>
+            </div>
+          </p>
+        </div>
+        -->
+
+      </div>
+  </header>
+
+  <!-- Portfolio Grid Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="container" style="text-align: center;">
+      <h2 class="text-center text-uppercase text-secondary">Análise Temporal</h2>
+      <div class='tableauPlaceholder' id='viz1534628173109' style='position: relative; margin: 0 auto;'>
+        <noscript>
+          <a href='#'>
+            <img alt='Painel por Bairro ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;DemandaSocial-CG-PorBairros&#47;PainelporBairro&#47;1_rss.png'
+              style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='DemandaSocial-CG-PorBairros&#47;PainelporBairro' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;DemandaSocial-CG-PorBairros&#47;PainelporBairro&#47;1.png'
+          />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='filter' value='publish=yes' />
+        </object>
+      </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1534628173109');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '1024px'; vizElement.style.height = '1080px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+
+      <div class='tableauPlaceholder' id='viz1534637435171' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt='Painel IDEB por Escola ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;DemandaSocial-CG-PorBairros&#47;PainelIDEBporEscola&#47;1_rss.png'
+              style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='DemandaSocial-CG-PorBairros&#47;PainelIDEBporEscola' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;DemandaSocial-CG-PorBairros&#47;PainelIDEBporEscola&#47;1.png'
+          />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='filter' value='publish=yes' />
+        </object>
+      </div>
+
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1534637435171');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '1024px';
+        vizElement.style.height = '495px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+
+      <a class="portfolio-item d-block mx-auto" href="#alerta-modal" style="margin-top: 20px;">
+        <button class="button-alerta">
+          <i class="fa fa-bullhorn" aria-hidden="true"></i> Emitir Alerta!
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 ml-auto" style="margin-bottom: 20px;">
+          <h2 class="text-center text-uppercase text-white">Sobre</h2>
+          <p class="lead">O FOCAQUI dissemina os índices de educação, violência doméstica e homicídios na cidade de Campina Grande - PB.
+            Após o cruzamento dos dados, a plataforma permite aos cidadãos acompanhar os pontos críticos por bairros e por
+            escolas e, a partir daí, cobrar dos gestores responsáveis, mediante a emissão de alertas, maiores investimentos
+            em educação objetivando reduzir a insegurança. Em alguns casos, já é possível constatar que o aumento da nota
+            média do Índice de Desenvolvimento da Educação Básica (IDEB) acompanha a diminuição dos índices de violência.</p>
+        </div>
+        <div class="col-lg-12 ml-auto">
+          <h2 class="text-center text-uppercase text-white">Dados Utilizados</h2>
+          <p class="lead"> A plataforma utiliza dados abertos disponibilizados nas seguintes bases:
+            <p>- Observatório de Campina Grande (http://observacampina.com.br);</p>
+            <p>- Dados sobre violência no transporte público informados pela Superintendência de Trânsito e Transportes Públicos
+              de Campina Grande (STTP);</p>
+            <p>- Índice de Desenvolvimento da Educação Básica (IDEB);</p>
+            <p>- Portal da Transparência de Campina Grande - PB;</p>
+            <p>- Sistema de Acompanhamento da Gestão dos Recursos da Sociedade do Tribunal de Contas do Estado da Paraíba (SAGRES);</p>
+            <p>- Artigo científico de Frankneyson Santos Barbosa, que retrata sobre a criminalidade e expõe o “Mapa da Violência
+              em Campina Grande no ano de 2014”;</p>
+            <p>Trabalhos de Conclusão de Curso dos alunos: Frankneyson Santos Barbosa (Faculdade UNESC), que trouxe dados de
+              violência em Campina Grande no ano de 2016, Bruno Silva Targino (UEPB), que apresentou uma análise dos crimes
+              violentos em Campina Grande no ano de 2017.
+            </p>
+            <h6>ATENÇÃO!</h6>
+            <p>Durante a pesquisa, foi constatada a ausência de dados disponibilizados pelos órgãos públicos, especialmente
+              pela Secretaria de Estado da Segurança Pública e Defesa Social da Paraíba, que não possui sequer estatísticas
+              do número de ocorrências registradas no Estado.</p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Contato</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+          <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Nome</label>
+                <input class="form-control" id="nome" type="text" placeholder="Nome" required="required" data-validation-required-message="Digite seu Nome.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Email</label>
+                <input class="form-control" id="email" type="email" placeholder="Email" required="required" data-validation-required-message="Digite seu Email.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="5" placeholder="Mensagem" required="required" data-validation-required-message="Digite sua Mensagem."></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">
+                <i class="fa fa-check"></i> Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Localização</h4>
+          <p class="lead mb-0">Estação das Artes
+            <br>Avenida João Cirilo da Silva - Altiplano Cabo Branco, João Pessoa - PB, 58046-010</p>
+        </div>
+        <div class="col-md-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Redes Sociais</h4>
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <i class="fa fa-fw fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <i class="fa fa-fw fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <i class="fa fa-fw fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-uppercase mb-4">Sobre</h4>
+          <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
+            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="copyright py-4 text-center text-white">
+    <div class="container">
+      <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
+        <img alt="Licença Creative Commons" src="https://i.creativecommons.org/l/by/4.0/88x31.png" style="height: 15px;">
+      </a> Este trabalho está licenciado com uma Licença
+      <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons - Atribuição 4.0 Internacional</a>.
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Portfolio Modals -->
+
+  <!-- Portfolio Modal 1 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
+              recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+              itaque. Nam.</p>
+            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              <i class="fa fa-close"></i>
+              Close Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 2 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
+              recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+              itaque. Nam.</p>
+            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              <i class="fa fa-close"></i>
+              Close Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
+              recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+              itaque. Nam.</p>
+            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              <i class="fa fa-close"></i>
+              Close Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 4 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
+              recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+              itaque. Nam.</p>
+            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              <i class="fa fa-close"></i>
+              Close Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 5 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
+              recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+              itaque. Nam.</p>
+            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              <i class="fa fa-close"></i>
+              Close Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 6 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam,
+              recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+              itaque. Nam.</p>
+            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              <i class="fa fa-close"></i>
+              Close Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alerta Visualizar Modal -->
+  <div class="portfolio-modal mfp-hide" id="alerta-visualizar">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center" style="height: 2350px;">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-secondary text-uppercase mb-0">Visualizar Alertas</h2>
+            <p class="mb-5">Dados referentes a todos os alertas emitidos pelos os usuários.</p>
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-6" style="margin: 0 auto;">
+              <label>Selecione a Área de Interesse dos Alertas</label>
+              <select class="form-control" id="selectTeste" style="margin-bottom: 20px;">
+                <option value="0">GERAL</option>
+                <option value="1">EDUCAÇÃO</option>
+                <option value="2">VIOLÊNCIA</option>
+              </select>
+            </div>
+            <div class="col-md-6" style="margin: 0 auto;">
+              <button class="button-edu" style="width: 100%; margin-bottom: 60px;">
+                <i class="fa fa-eye" aria-hidden="true"></i> Visualizar</button>
+              <h5 style="margin-bottom: 30px;">Maiores quantidades de alertas por bairro</h5>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="img/foca-1.png" alt="" style="width: 65px; margin-top: 42px;">
+            <h6>MALVINAS</h6>
+          </div>
+          <div class="col-md-4">
+            <img src="img/foca-2.png" alt="" style="width: 100px;">
+            <h6>TRÊS IRMÃS</h6>
+          </div>
+          <div class="col-md-4">
+            <img src="img/foca-3.png" alt="" style="width: 57px; margin-top: 44px;">
+            <h6>ALTO BRANCO</h6>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id="columnchart_values" style="width: 100%; height: 500px; margin-bottom: 120px;"></div>
+        </div>
+        <div class="col-md-12" style="text-align: center;">
+          <div style="background-color: white; width: 100%; height: 60px; position: absolute;">
+            <h6 style="margin-top: 30px;">Mapa de Alertas</h6>
+          </div>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1WLfEaIQ8cvXZk8Sdi7V3ruOjpNqvCsVF" width="100%" height="480" style="border: none;"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alerta Modal -->
+  <div class="portfolio-modal mfp-hide" id="alerta-modal">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center" style="height: 1350px;">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Gerar Alerta</h2>
+            <p class="mb-5">Realize seu alerta, faça a prefeitura saber da necessidade de seu bairro. Preencha o formulário e emita seu alerta.</p>
+            <p>
+              <div class="form-group">
+                <div class="form-group">
+                  <label style="font-weight: bold;">Nome</label>
+                  <input type="nome" class="form-control" id="nome" aria-describedby="nome" placeholder="Insira seu Nome">
+                  <small id="emailHelp" class="form-text text-muted">Obs.: O fornecimento do nome é opcional.</small>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-group">
+                  <label style="font-weight: bold;">CPF</label>
+                  <input type="cpf" class="form-control" id="cpf" aria-describedby="cpf" placeholder="Insira seu CPF">
+                  <small id="emailHelp" class="form-text text-muted">Obs.: O seu CPF não será divulgado. O fornecimento desse dado é para controle interno.</small>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="exampleInputEmail1" style="font-weight: bold;">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira seu emal">
+                  <small id="emailHelp" class="form-text text-muted">Obs.: O fornecimento do seu email é opcional. Esta informação é importante para que a prefeitura tenha
+                    uma forma de contato direto com o emissor do alerta.</small>
+                </div>
+              </div>
+              <div class="form-group">
+                <label style="font-weight: bold;">Bairros</label>
+                <select class="form-control" name="bairros" id="bairros">
+                  <option value="0">Selecione seu bairro</option>
+                  <option value="1">PEDREGAL</option>
+                  <option value="2">CENTENÁRIO</option>
+                  <option value="3">NOVA BRASÍLIA</option>
+                  <option value="4">MONTE CASTELO</option>
+                  <option value="5">MIRANTE</option>
+                  <option value="6">SANDRA CAVALCANTE</option>
+                  <option value="7">VILA CABRAL</option>
+                  <option value="8">ITARARÉ</option>
+                  <option value="9">LOUZEIRO</option>
+                  <option value="10">NAÇÕES</option>
+                  <option value="11">ARAXÁ</option>
+                  <option value="12">NOVO BODOCONGÓ</option>
+                  <option value="13">CUITÉS</option>
+                  <option value="14">JARDIM CONTINENTAL</option>
+                  <option value="15">UNIVERSITÁRIO</option>
+                  <option value="16">CATOLÉ</option>
+                  <option value="17">JOSÉ PINHEIRO</option>
+                  <option value="18">PALMEIRA</option>
+                  <option value="19">JEREMIAS</option>
+                  <option value="20">MONTE SANTO</option>
+                  <option value="21">PRATA</option>
+                  <option value="22">BELA VISTA</option>
+                  <option value="23">VELAME</option>
+                  <option value="24">DISTRITO INDUSTRIAL</option>
+                  <option value="25">ALTO BRANCO</option>
+                  <option value="26">JARDIM TAVARES</option>
+                  <option value="27">CASTELO BRANCO</option>
+                  <option value="28">SANTO ANTÔNIO</option>
+                  <option value="29">CONCEIÇÃO</option>
+                  <option value="30">SÃO JOSÉ</option>
+                  <option value="31">CENTRO</option>
+                  <option value="32">LAURITZEN</option>
+                  <option value="33">CRUZEIRO</option>
+                  <option value="34">DINAMÉRICA</option>
+                  <option value="35">SANTA CRUZ</option>
+                  <option value="36">MALVINAS</option>
+                  <option value="37">ESTAÇÃO VELHA</option>
+                  <option value="38">TAMBOR</option>
+                  <option value="39">JARDIM PAULISTANO</option>
+                  <option value="40">CIDADES</option>
+                  <option value="41">ACÁCIO FIGUEIREDO</option>
+                  <option value="42">PRESIDENTE MÉDICE</option>
+                  <option value="43">SERROTÃO</option>
+                  <option value="44">TRÊS IRMÃS</option>
+                  <option value="45">LIBERDADE</option>
+                  <option value="46">BODOCONGÓ</option>
+                  <option value="47">RAMADINHA</option>
+                  <option value="48">JARDIM QUARENTA</option>
+                  <option value="49">SANTA ROSA</option>
+                  <option value="50">QUARENTA</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1" style="font-weight: bold;">Áera</label>
+                <!-- unchecked -->
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
+                  <label class="form-check-label" for="materialUnchecked" style="margin-right: 50px;">Educação</label>
+
+                  <input type="radio" class="form-check-input" id="materialChecked" name="materialExampleRadios" checked>
+                  <label class="form-check-label" for="materialChecked">Violência</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1" style="font-weight: bold;">Tipo de Alerta para Educação</label>
+                <select class="form-control" name="tipo-alerta" id="tipo-alerta">
+                  <option value="0">Selecione o tipo do alerta - EDUCAÇÃO</option>
+                  <option value="1">FALTA DE VAGAS</option>
+                  <option value="2">MERENDA ESCOLAR</option>
+                  <option value="3">FALTA DE PROFESSORES</option>
+                  <option value="4">VIOLÊNCIA NA ESCOLA</option>
+                  <option value="4">MANUTENÇÃO NA ESCOLA</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1" style="font-weight: bold;">Tipo de Alerta para Violência</label>
+                <select class="form-control" name="tipo-alerta" id="tipo-alerta">
+                  <option value="0">Selecione o tipo do alerta - VIOLÊNCIA</option>
+                  <option value="1">ASSASSINATO</option>
+                  <option value="2">ASSALTO</option>
+                  <option value="3">ROUBO DE VEÍCULOS</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1" style="font-weight: bold;">Mensagem</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" maxlength="280"></textarea>
+                <p>* limite de 280 caracteres</p>
+              </div>
+            </p>
+            <a class="btn btn-danger btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              <i class="fa fa-check"></i>
+              Enviar Alerta</a>
+            <div style="margin-top: 20px; border: 1px solid #999; border-radius: 10px; padding: 20px;">
+              <h5>Reforce seu alerta</h5>
+              <p style="text-align: justify;">
+                A ouvidoria é um canal para você apresentar sugestões, elogios, solicitações, reclamações e denúncias. No serviço público,
+                a ouvidoria é uma espécie de “ponte” entre você e a Administração Pública (que são os órgãos, entidades e
+                agentes públicos que trabalham nos diversos setores do governo federal, estadual e municipal). A ouvidoria
+                recebe as manifestações dos cidadãos, analisa, orienta e encaminha às áreas responsáveis pelo tratamento
+                ou apuração do caso.
+              </p>
+              <a class="btn btn-danger btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-bullhorn"></i>
+                e-Ouv</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.min.js"></script>
+
+</body>
+
+</html>
